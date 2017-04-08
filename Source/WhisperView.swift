@@ -5,7 +5,7 @@ public protocol NotificationControllerDelegate: class {
 }
 
 open class WhisperView: UIView {
-
+  let defaultAccessibilityIdentifier: String = "whisper_view"
   struct Dimensions {
     static let height: CGFloat = 24
     static let offsetHeight: CGFloat = height * 2
@@ -60,6 +60,7 @@ open class WhisperView: UIView {
     titleLabel.sizeToFit()
     setupFrames()
     clipsToBounds = true
+    accessibilityIdentifier = defaultAccessibilityIdentifier
   }
 
   public required init?(coder aDecoder: NSCoder) {

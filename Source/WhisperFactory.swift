@@ -8,7 +8,6 @@ public enum WhisperAction: String {
 let whisperFactory: WhisperFactory = WhisperFactory()
 
 class WhisperFactory: NSObject {
-
   struct AnimationTiming {
     static let movement: TimeInterval = 0.3
     static let switcher: TimeInterval = 0.1
